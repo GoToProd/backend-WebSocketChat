@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for users in users_list %}
+
+      <div class="UsersList">
+          {{ users.username }}
+		      {{ users.profile_image }}
+      </div>
+
+  {% endfor %}
+{% endblock content %}
+
+<!-- Почитал что так вставляются объекты (вызываются из-за цикла for. все ок но проверить работает ли не могу
+потому что страница не открывается. пишет Sometimes wrong error. это вызывается из views.py отметил там где HttpResponse -->
